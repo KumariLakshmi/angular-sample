@@ -9,7 +9,8 @@ export class GetapiserviceService {
   constructor(private http:HttpClient) { }
 
 getapi(){
-  return this.http.get("https://jsonplaceholder.typicode.com/todos/1")
+  // return this.http.get("https://jsonplaceholder.typicode.com/todos/1")
+  return this.http.get("http://jsonplaceholder.typicode.com/posts")
 }
 
 

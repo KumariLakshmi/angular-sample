@@ -8,13 +8,15 @@ import {GetapiserviceService} from './getapiservice.service';
 })
 export class AppComponent {
   // title = 'angular';
-  title="Get call api ";
-  constructor(private api:GetapiserviceService){
-
-  }
+  // title="Get call api";
+  data:any;
+  constructor(private api:GetapiserviceService){}
 ngOnInit(){
-  this.api.getapi().subscribe((data)=>{
-    console.log("get api data",data);
+  this.api.getapi().subscribe((result)=>{
+    console.warn("get data",result);
+    this.data=result
+    // this.title=data["title"];
+    // return data
     
   })
 }
